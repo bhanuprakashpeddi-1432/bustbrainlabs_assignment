@@ -19,7 +19,8 @@ const AuthCallback = ({ onLogin }) => {
             try {
                 // Fetch user details using the ID
                 // We use the x-user-id header which our backend middleware expects
-                const response = await axios.get('http://localhost:3000/auth/me', {
+                const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+                const response = await axios.get(`${API_BASE_URL}/auth/me`, {
                     headers: {
                         'x-user-id': userId
                     }
