@@ -8,4 +8,5 @@ const ResponseSchema = new Schema({
   status: { type: String, enum: ['synced','pending','deletedInAirtable'], default: 'synced' }
 }, { timestamps: true });
 
+
 module.exports = mongoose.model('Response', ResponseSchema);

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
 const ConditionSchema = new Schema({
   questionKey: String,
   operator: { type: String, enum: ['equals','notEquals','contains'] },
@@ -19,7 +20,7 @@ const QuestionSchema = new Schema({
   type: { type: String, enum: ['short_text','long_text','single_select','multi_select','attachment'] },
   required: { type: Boolean, default: false },
   conditionalRules: { type: ConditionalRulesSchema, default: null },
-  choices: [String] // for select types
+  choices: [String]
 }, { _id: false });
 
 const FormSchema = new Schema({
