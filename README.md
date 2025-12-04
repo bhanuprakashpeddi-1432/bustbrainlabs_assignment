@@ -339,7 +339,7 @@ MIT
 
 ## 👤 Author
 
-Your Name
+Bhanuprakash Peddi 
 
 ## 🙏 Acknowledgments
 
